@@ -1,5 +1,6 @@
 package entities;
 
+
 public class Soft extends Ingredient{
 	private String nom;
 
