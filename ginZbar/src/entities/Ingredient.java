@@ -1,8 +1,18 @@
 package entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Ingredient {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	private String description;
+	private Cocktail cocktail;
 	
 	public Ingredient(){}
 	
@@ -20,6 +30,14 @@ public class Ingredient {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	@Override
+	public String toString() {
+		return "Ingredient [id=" + id + ", description=" + description + ", cocktail=" + cocktail + "]";
+
+	
+	
 	}
 
 }
