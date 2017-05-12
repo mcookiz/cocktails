@@ -1,5 +1,10 @@
 package entities;
 
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+
+@Entity
+@PrimaryKeyJoinColumn
 public class Alcool extends Ingredient {
 	private String nom;
 	
