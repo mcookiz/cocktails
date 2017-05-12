@@ -1,9 +1,14 @@
 package entities;
 
+import javax.persistence.Entity;
+
 public class Dose {
+	
+	private long id;
 	
 	private String unit;
 	private double quantity;
+	
 	
 	public Dose(){}
 	
