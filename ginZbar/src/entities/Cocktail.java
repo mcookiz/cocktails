@@ -1,5 +1,8 @@
 package entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +14,9 @@ public class Cocktail {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	private String nom;
-	private Ingredient ingredient;
+	
+	List<Ingredient> listeIngredient=new ArrayList<>();
+	List<Etapes> listeEtapes =new ArrayList<>();
 	
 	
 	
@@ -34,10 +39,23 @@ public class Cocktail {
 		this.id = id;
 	}
 	
-	@Override
-	public String toString() {
-		return "Cocktail [id=" + id +", nom=" + "]\n\t"+ingredient;
+	
+
+	
+	public List<Ingredient> getListeIngredient() {
+		return listeIngredient;
 	}
+	public void setListeIngredient(List<Ingredient> listeIngredient) {
+		this.listeIngredient = listeIngredient;
+	}
+	public List<Etapes> getListeEtapes() {
+		return listeEtapes;
+	}
+	public void setListeEtapes(List<Etapes> listeEtapes) {
+		this.listeEtapes = listeEtapes;
+	}
+	
+	
 
 
 }
